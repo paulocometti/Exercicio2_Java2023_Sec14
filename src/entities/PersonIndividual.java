@@ -10,7 +10,8 @@ public class PersonIndividual extends Person {
 		this.health = health;
 	}
 
-	public final Double taxIndividual() {
+	@Override
+	public Double tax(){
 		if(getAnual()>=20000.00) {
 			if(health > 0) {
 				return (getAnual()*0.25)-(health*0.5);
@@ -29,15 +30,10 @@ public class PersonIndividual extends Person {
 		}
 		return null;
 	}
-
-	@Override
-	public Double totalTax() {
-		return taxIndividual();
-	}
 	
 	@Override
 	public String toString() {
-		return getName()+": $ "+taxIndividual();
+		return getName()+": $ "+ String.format("%.2f", tax());
 	}
 
 	

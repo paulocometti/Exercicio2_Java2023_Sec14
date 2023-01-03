@@ -19,6 +19,6 @@ public abstract class Person {
 		return anual;
 	}
 	
-	public abstract Double totalTax();
+	public abstract Double tax();
 	
 }

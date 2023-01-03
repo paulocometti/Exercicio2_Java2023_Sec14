@@ -50,7 +50,7 @@ public class Main {
 		System.out.println();
 		double total = 0;
 		for(Person p : list) {
-			total += p.totalTax(); 
+			total += p.tax(); 
 		}
 		System.out.println("TOTAL TAXES: "+total);
 		
